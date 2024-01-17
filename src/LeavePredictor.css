@@ -1,0 +1,16 @@
+.background {
+    background-color: #f6d7e1;
+  }
+  
+  .form-container {
+    background-color: #f9e4d6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
