@@ -20,7 +20,7 @@ const CurlComponent = ({setOutputData, setValue}) => {
   const handleFetchCurl = async () => {
     const { Tenant, WorkCode, Year, Month } = inputData;
     const headers = {
-        'Authorization': 'Bearer ya29.a0AfB_byAKCbCJN5-PHjUsgxKaYu2ex9rxAXIckkn12Fb4WupeHZn2EOJpiByhVlG7j8knhm1aDsWRh1bgroTbfsOMu5VSiCNWVR4U2kMh8TOaWbwC5fB_kM0YAOiO3ncFSTraI0uP8ZP9QfaBYeq64ZvDU3JFukGLmBjr3ulbCA4aCgYKAYkSAQ8SFQHGX2MiSe0QoJg8gddrigpfpOM3dQ0178',
+        'Authorization': 'Bearer ya29.a0AfB_byBWVIBVXJ0L8wxgE98W20hr_Y6aj8pD91inqIve3PmVqqt_uiXzmUcf7OkbOe93fqhZyjvYvSVqwy9xme98geTGe1ohKPSVezkDO1GVhnIyIkRmA4sBMFhWFQPaX2LOrl-vJzyCFl_jLqLzOH-f39iG-7O5MsaIcSOM5LsaCgYKAcESAQ8SFQHGX2MicDomw5dMK2evB4HqhqocMA0178',
         'Content-Type': 'application/json'
       };
       const data = {
