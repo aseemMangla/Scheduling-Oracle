@@ -4,7 +4,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Form, Button } from 'react-bootstrap';
 
-const CurlComponent = ({setOutputData}) => {
+const CurlComponent = ({setOutputData, setValue}) => {
   const [inputData, setInputData] = useState({
     Tenant: '',
     WorkCode: '',
@@ -17,10 +17,10 @@ const CurlComponent = ({setOutputData}) => {
     setInputData({ ...inputData, [e.target.name]: e.target.value });
   };
 
-  const handleFetchCurl = () => {
+  const handleFetchCurl = async () => {
     const { Tenant, WorkCode, Year, Month } = inputData;
     const headers = {
-        'Authorization': 'Bearer ya29.a0AfB_byCR9molSAFX-P8JNSqYOIetp7iSy1FoV5aL3DftV1PZ9BNI0uTKU-cr4UoBHgo--4JutbJKlm0wnAsInI28yWbA16WArLvIRlBDahlVCYgEFOqFuwXwBo6cM_LWoR5xHE5nLBDQEN4LV4uHILtcOmJtgM-kN-QcL42kRwaCgYKAZsSAQ8SFQHGX2MiMZMcJDQO75UWJtMa2K5BGg0177',
+        'Authorization': 'Bearer ya29.a0AfB_byAKCbCJN5-PHjUsgxKaYu2ex9rxAXIckkn12Fb4WupeHZn2EOJpiByhVlG7j8knhm1aDsWRh1bgroTbfsOMu5VSiCNWVR4U2kMh8TOaWbwC5fB_kM0YAOiO3ncFSTraI0uP8ZP9QfaBYeq64ZvDU3JFukGLmBjr3ulbCA4aCgYKAYkSAQ8SFQHGX2MiSe0QoJg8gddrigpfpOM3dQ0178',
         'Content-Type': 'application/json'
       };
       const data = {
@@ -37,6 +37,7 @@ const CurlComponent = ({setOutputData}) => {
         .then((response) => {
         console.log(response.data);
           setOutputData(JSON.stringify(response.data, null, 2));
+          setValue(response.data?.predictions[0].value)
         })
         .catch((error) => {
           console.error(error);
