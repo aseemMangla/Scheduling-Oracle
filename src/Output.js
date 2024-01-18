@@ -17,7 +17,7 @@ const Output = ({ outputData, value }) => {
        {value && <h3>Value: {value.toPrecision(3)}</h3>}
       </div>
       <div>
-      <Button id="Popover1" style={{backgroundColor: '#005151'}} variant="success" onClick={() => toggle()}>
+      <Button id="Popover1" style={{backgroundColor: '#005151', margin: 5}} variant="success" onClick={() => toggle()}>
         See Result Data
       </Button>
       <div>
