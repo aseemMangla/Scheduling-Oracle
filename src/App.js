@@ -10,9 +10,9 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Scheduling Oracle</h1>
+      <h1 style={{textAlign:'center', padding:25}}>SchedulingOracle</h1>
       <div className="d-flex justify-content-between"> 
-      <div>
+      <div style={{minWidth: '40%'}}>
       <CurlComponent setOutputData={setOutputData} setValue={setValue} />
       </div>
       <div>

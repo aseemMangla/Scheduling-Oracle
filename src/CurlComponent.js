@@ -48,24 +48,24 @@ const CurlComponent = ({setOutputData, setValue}) => {
   return (
     <Container className="mt-5">
       <Form className="card p-4">
-        <h2 className="mb-4">Scheduling Oracle</h2>
+        <h2 className="mb-4">Input Parameters</h2>
         <Form.Group className="mb-3">
-          <Form.Label>Tenant:</Form.Label>
+          <Form.Label>Tenant</Form.Label>
           <Form.Control type="text" name="Tenant" value={inputData.Tenant} onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>WorkCode:</Form.Label>
+          <Form.Label>Scheduling Type</Form.Label>
           <Form.Control type="text" name="WorkCode" value={inputData.WorkCode} onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Year:</Form.Label>
+          <Form.Label>Year</Form.Label>
           <Form.Control type="text" name="Year" value={inputData.Year} onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Label>Month:</Form.Label>
+          <Form.Label>Month</Form.Label>
           <Form.Control type="text" name="Month" value={inputData.Month} onChange={handleChange} />
         </Form.Group>
-        <Button variant="primary" onClick={handleFetchCurl}>Fetch Curl</Button>
+        <Button style={{backgroundColor: '#005151'}} variant="success" onClick={handleFetchCurl}>See Predictions</Button>
       </Form>
     </Container>
   );
